@@ -1,0 +1,183 @@
+// Fonts
+@font-face {
+  font-family: 'font-inria';
+  src: url(fonts/InriaSerif-Bold.woff2);
+}
+
+@font-face {
+  font-family: 'font-roboto';
+  src: url(fonts/Roboto-Medium.woff2);
+}
+
+
+//Mixins
+@mixin flex ($align-content, $justify-content){
+  align-content:$align-content;
+  justify-content: $justify-content;
+  display: flex;
+}
+
+@mixin button-main {
+  padding: 13px 50px;
+  border: 2px solid $black;
+  text-transform: uppercase;
+  font-family: $font-inria;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $beige-color;
+  }
+}
+
+// Variables
+$black: #000;
+$white: #fff;
+$beige-color: #D6CCC2;
+$font-inria: font-inria;
+$font-roboto: font-roboto;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-image: url(images/hero-shot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+    padding-top: 20px;
+
+    .menu {
+      width: 55%;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+        color: $black;
+        font-size: 20px;
+        font-family: $font-inria;
+      }
+    }
+  }
+
+  .header-CTA {
+    font-size: 28px;
+    @include flex(center, center);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+
+    button {
+      @include button-main();
+      margin-top: 20px;
+    }
+
+  }
+}
+
+main {
+  font-family: $font-inria;
+  color: $black;
+
+  .main-top {
+    font-size: 20px;
+    margin: 50px 0;
+    @include flex(center, center);
+    flex-direction: column;
+    align-items: center;
+
+    .decoration-line {
+      width: 100px;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $black;
+      margin-top: 15px;
+    }
+
+    span {
+      font-family: $font-roboto;
+    }
+  }
+
+  .main-post {
+    @include flex(center, space-between);
+
+    .main-post-title {
+      @include flex(center, center);
+      flex-direction: column;
+      align-items: center;
+      background-color: $beige-color;
+      width: 100%;
+
+      button {
+        @include button-main();
+      }
+
+      span {
+        padding-bottom: 20px;
+        font-size: 28px;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+  }
+
+  .about {
+    @include flex(center, center);
+    flex-direction: column;
+    margin: 50px 0;
+    span {
+      font-size: 28px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: 22px;
+      font-family: $font-roboto;
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+  }
+}
+
+footer {
+  @include flex(center, space-around);
+  background-color: $beige-color;
+  font-family: $font-inria;
+  font-size: 20px;
+  padding: 20px 50px;
+  align-items: center;
+
+  .footer-item {
+    @include flex(start, space-between);
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: $black;
+      padding: 8px 0;
+    }
+  }
+
+  .social-media {
+    flex-direction: row;
+
+    img {
+      margin: 0 8px;
+    }
+  }
+}

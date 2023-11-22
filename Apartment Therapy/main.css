@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "font-inria";
+  src: url(fonts/InriaSerif-Bold.woff2);
+}
+@font-face {
+  font-family: "font-roboto";
+  src: url(fonts/Roboto-Medium.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-image: url(images/hero-shot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  padding-top: 20px;
+}
+header nav .menu {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+header nav .menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-family: font-inria;
+}
+header .header-CTA {
+  font-size: 28px;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+header .header-CTA button {
+  padding: 13px 50px;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  font-family: font-inria;
+  background-color: transparent;
+  margin-top: 20px;
+}
+header .header-CTA button:hover {
+  background-color: #D6CCC2;
+}
+
+main {
+  font-family: font-inria;
+  color: #000;
+}
+main .main-top {
+  font-size: 20px;
+  margin: 50px 0;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main-top .decoration-line {
+  width: 100px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #000;
+  margin-top: 15px;
+}
+main .main-top span {
+  font-family: font-roboto;
+}
+main .main-post {
+  align-content: center;
+  justify-content: space-between;
+  display: flex;
+}
+main .main-post .main-post-title {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D6CCC2;
+  width: 100%;
+}
+main .main-post .main-post-title button {
+  padding: 13px 50px;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  font-family: font-inria;
+  background-color: transparent;
+}
+main .main-post .main-post-title button:hover {
+  background-color: #D6CCC2;
+}
+main .main-post .main-post-title span {
+  padding-bottom: 20px;
+  font-size: 28px;
+  max-width: 300px;
+  text-align: center;
+}
+main .about {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+main .about span {
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+main .about p {
+  font-size: 22px;
+  font-family: font-roboto;
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+footer {
+  align-content: center;
+  justify-content: space-around;
+  display: flex;
+  background-color: #D6CCC2;
+  font-family: font-inria;
+  font-size: 20px;
+  padding: 20px 50px;
+  align-items: center;
+}
+footer .footer-item {
+  align-content: start;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-item a {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 0;
+}
+footer .social-media {
+  flex-direction: row;
+}
+footer .social-media img {
+  margin: 0 8px;
+}/*# sourceMappingURL=main.css.map */
