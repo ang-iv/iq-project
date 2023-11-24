@@ -28,7 +28,23 @@
     background-color: $beige-color;
   }
 }
+@mixin laptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
 
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
 // Variables
 $black: #000;
 $white: #fff;
@@ -84,6 +100,15 @@ header {
       margin-top: 20px;
     }
 
+  }
+  @include laptop() {
+    background-color: $black;
+  }
+  @include tablet() {
+    background-color: $beige-color;
+  }
+  @include mobile() {
+    background-color: $white;
   }
 }
 
@@ -152,6 +177,15 @@ main {
       margin: auto;
     }
   }
+  @include laptop() {
+    background-color: $black;
+  }
+  @include tablet() {
+    background-color: $beige-color;
+  }
+  @include mobile() {
+    background-color: $white;
+  }
 }
 
 footer {
@@ -179,5 +213,14 @@ footer {
     img {
       margin: 0 8px;
     }
+  }
+  @include laptop() {
+    background-color: $black;
+  }
+  @include tablet() {
+    background-color: $beige-color;
+  }
+  @include mobile() {
+    background-color: $white;
   }
 }
